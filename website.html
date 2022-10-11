@@ -16,7 +16,7 @@
 <body>
     <form style="text-align: center;">
         <br>
-        Name:<br> <input type="text" name="name">
+        Name:<br> <input type="text" maxlength="50" name="name">
         <br>
         <br>
         Time Checked In:<br> <input type="time" name="subject">
@@ -24,18 +24,21 @@
         <br>
         Time Checked Out:<br> <input type="time" name="subject">
         <br>
-         <br> <button>Submit</button>
+         <br> <button id="button">Submit</button>
      </form>
      <script>
-         var condition = true;
-         var awesome;
-         while(condition){
-          awesome = prompt("You like fortnite?");
-            if(awesome.toLowerCase() == "yes"){
-                condition = false;
-            }
-         }
+         var val = document.getElementById("button").value;
 
-     </script>
+        val.addEventListener("click", disableButton);
+
+        function disableButton() {
+        val.disabled = true;
+        val.value = 'Submit';
+        setTimeout(() => {
+            val.disabled = false;
+            val.value = 'Submit';
+        }, 2000);
+        }
+    </script>
 </body>
 </html>
