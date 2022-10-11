@@ -16,7 +16,7 @@
 <body>
     <form style="text-align: center;">
         <br>
-        Name:<br> <input type="text" name="name">
+        Name:<br> <input type="text" maxlength="50" name="name">
         <br>
         <br>
         Time Checked In:<br> <input type="time" name="timein">
@@ -24,10 +24,11 @@
         <br>
         Time Checked Out:<br> <input type="time" name="timeout">
         <br>
-         <br> <button>Submit</button>
+         <br> <button id="button">Submit</button>
      </form>
      
      <script>
+<<<<<<< HEAD
      function othername() {
         var input = document.getElementById("name").nodeValue;
         alert(input);
@@ -47,5 +48,20 @@
         //  timer and repeated names
 
      </script> -->
+=======
+         var val = document.getElementById("button").value;
+
+        val.addEventListener("click", disableButton);
+
+        function disableButton() {
+        val.disabled = true;
+        val.value = 'Submit';
+        setTimeout(() => {
+            val.disabled = false;
+            val.value = 'Submit';
+        }, 2000);
+        }
+    </script>
+>>>>>>> 5a0480edd5177721c48e3d0b41cf6bf063b60b43
 </body>
 </html>
