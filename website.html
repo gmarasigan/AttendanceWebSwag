@@ -19,14 +19,22 @@
         Name:<br> <input type="text" name="name">
         <br>
         <br>
-        Time Checked In:<br> <input type="time" name="subject">
+        Time Checked In:<br> <input type="time" name="timein">
         <br>
         <br>
-        Time Checked Out:<br> <input type="time" name="subject">
+        Time Checked Out:<br> <input type="time" name="timeout">
         <br>
          <br> <button>Submit</button>
      </form>
+     
      <script>
+     function othername() {
+        var input = document.getElementById("name").nodeValue;
+        alert(input);
+    }
+    </script>
+    
+     <!-- <script>
          var condition = true;
          var awesome;
          while(condition){
@@ -36,6 +44,8 @@
             }
          }
 
-     </script>
+        //  timer and repeated names
+
+     </script> -->
 </body>
 </html>
